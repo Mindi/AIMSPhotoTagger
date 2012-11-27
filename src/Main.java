@@ -11,7 +11,7 @@ public class Main {
          factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
         EntityManager em = factory.createEntityManager();
 
-        Query q = em.createQuery("SELECT Keyword FROM REEFMON.Keywords;");
+        Query q = em.createNativeQuery("SELECT Keyword FROM Keywords;");
         List<String> keywords = q.getResultList();
 
         for (String keyword : keywords){
