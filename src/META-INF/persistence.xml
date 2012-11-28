@@ -5,12 +5,15 @@
     <persistence-unit name="REEF-DERBY" transaction-type="RESOURCE_LOCAL">
         <class>RmSectorEntity</class>
         <class>ReefGeolocale</class>
+        <class>Keywords</class>
+        <class>TaxonEntity</class>
+        <class>AllSpecyEntity</class>
 
 
         <properties>
 
             <property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:sqlite:\Documents and Settings\thart\Desktop\AIMSPhotoTagger\REEFMON.db"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlite:\Documents and Settings\amoore\Desktop\AIMSPhotoTagger\REEFMON.db"/>
 
 
                </properties>

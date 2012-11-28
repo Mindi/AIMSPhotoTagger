@@ -13,11 +13,11 @@ public class Main {
          factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
         EntityManager em = factory.createEntityManager();
 
-        Query q = em.createNativeQuery("SELECT Keyword FROM Keywords;");
-        List<String> keywords =  q.getResultList();
+        Query q = em.createQuery("SELECT k FROM Keywords k");
+        List<Keywords> keywords =  q.getResultList();
 
-        for (String keyword : keywords){
-            System.out.println(keyword);
+        for (Keywords keyword : keywords){
+            System.out.println(keyword.getKeyword());
         }
         q = em.createQuery("SELECT g FROM ReefGeolocale g ");
 
